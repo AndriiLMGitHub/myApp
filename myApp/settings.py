@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['andriipythonanywhere.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'about',
     'homepage',
     'contact',
     'price',
