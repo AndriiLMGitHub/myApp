@@ -31,11 +31,11 @@ ALLOWED_HOSTS = ['andriipythonanywhere.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'news',
     'about',
     'homepage',
     'contact',
     'price',
-    'news',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
