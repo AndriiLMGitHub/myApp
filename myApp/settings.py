@@ -25,7 +25,7 @@ SECRET_KEY = 'k0w4d_1ck=2r4eef1#16mw($718%6ki7$vs5t#!1gl_fh@-pdd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['andriipythonanywhere.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'homepage',
     'contact',
     'price',
+    'dashboard',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
