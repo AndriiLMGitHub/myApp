@@ -24,27 +24,15 @@
     <a class="p-2 text-dark" href="{% url 'price' %}">Ціни</a>
     <a class="p-2 text-dark" href="{% url 'contact' %}">Контакти</a>
     <!-- Example split danger button -->
-    <div class="btn-group">
-      <button type="button" class="btn btn-sm btn-success">Зробити певну дію</button>
-      <button type="button" class="btn btn-sm btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-      </div>
-    </div>
   </nav>
+  <a class="btn btn-primary style-class" href="#">Зареєструватися</a>
   <a class="btn btn-outline-primary" href="#">Увійти</a>
 </div>
 
 <div class="container">
 
-  {% block content %}
 
+  {% block content %}
 
 
   {% endblock %}
