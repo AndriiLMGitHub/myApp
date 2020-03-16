@@ -25,8 +25,13 @@
     <a class="p-2 text-dark" href="{% url 'contact' %}">Контакти</a>
     <!-- Example split danger button -->
   </nav>
-  <a class="btn btn-primary style-class" href="#">Зареєструватися</a>
-  <a class="btn btn-outline-primary" href="#">Увійти</a>
+  {% if user.is_authenticated %}
+  Привіт, {{user.username}}
+    <a class="btn btn-primary style-class" href="logout">Вийти</a>
+  {% else %}
+  <a class="btn btn-primary style-class" href="register">Зареєструватися</a>
+  <a class="btn btn-outline-primary" href="login">Увійти</a>
+  {% endif %}
 </div>
 
 <div class="container">
