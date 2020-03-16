@@ -6,6 +6,7 @@
 
 <div class="row">
   {% for blog_post in blog_posts %}
+<<<<<<< HEAD
   <div class="card" style="width: 16rem; margin: 0 5px;">
   <div class="card-body">
     <h5 class="card-title">Прізвище: {{blog_post.last_name}}</h5>
@@ -13,8 +14,17 @@
      <h6 class="card-title">Ваш вік: {{blog_post.age}}</h6>
     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eos.</p>
     <a href="#" class="btn btn-primary">Виконати дію, {{blog_post.first_name}}</a>
+=======
+  <div class="card" style="width: 18rem; margin: 0 20px;">
+    <div class="card-body">
+      <h5 class="card-title">Прізвище: {{blog_post.last_name}}</h5>
+      <h5 class="card-title">Ім'я: {{blog_post.first_name}}</h5>
+       <h6 class="card-title">Ваш вік: {{blog_post.age}}</h6>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eos.</p>
+      <a href="#" class="btn btn-primary">Виконати дію, {{i.first_name}}</a>
+    </div>
+>>>>>>> ddba7d3733d473f92278355ee935b694a83f670e
   </div>
-</div>
 {% endfor %}
 </div>
 

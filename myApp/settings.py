@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['andriipythonanywhere.pythonanywhere.com', '127.0.0.1']
 
 INSTALLED_APPS = [
     'news',
+    'account',
     'blog',
     'about',
     'homepage',
