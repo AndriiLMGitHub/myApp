@@ -3,7 +3,11 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+<<<<<<< HEAD
   <h1 class="display-2">Ураа! Ми авторизовані!</h1>
+=======
+  <h1 class="display-2">Ураа! Ми авторизовані, {{user.username}}!</h1>
+>>>>>>> d649b33e7f7b6a40504ba9d8857aadaf2b3ac53d
 {% else %}
   <h1 class="display-2">Треба авторизуватись!</h1>
 {% endif %}
