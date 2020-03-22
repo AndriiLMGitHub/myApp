@@ -1,12 +1,10 @@
-{% load static %}
-{% if user.is_authenticated %}
 {% extends 'homepage/base.html' %}
+{% load static %}
 
 {% block content %}
-
-  <h1 class="display-2">Ураа! Ми авторизовані!</h1>
-
-{% endblock %}
+{% if user.is_authenticated %}
+  <h1 class="display-2">Ураа! Ми авторизовані, {{user.username}}!</h1>
 {% else %}
   <h1 class="display-2">Треба авторизуватись!</h1>
 {% endif %}
+{% endblock %}
