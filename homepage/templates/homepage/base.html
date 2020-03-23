@@ -26,7 +26,7 @@
     <!-- Example split danger button -->
   </nav>
   {% if user.is_authenticated %}
-  Привіт, {{user.username}}
+  <span>Привіт, {{user.username}}</span>
     <a class="btn btn-primary style-class" href="logout">Вийти</a>
   {% else %}
   <a class="btn btn-primary style-class" href="register">Зареєструватися</a>
