@@ -17,7 +17,6 @@ class ContactForm(forms.Form):
 	message = forms.CharField()
 	copy = forms.BooleanField(required=False)
 	name = forms.CharField(max_length=100)
-	file = forms.FileField()
 
 
 
@@ -32,11 +31,10 @@ def contact(request):
 			message = form.cleaned_data['message']
 			copy = form.cleaned_data['copy']
 			name = form.cleaned_data['name']
-			file = form.cleaned_data['file']
 
 			recepients = ['andreydecua@gmail.com']
 
-			global_message = "Імя: " + name + "\n" + "Повідомлення: " + message + "\n" + file
+			global_message = "Імя: " + name + "\n" + "Повідомлення: " + message + "\n"
 
             # Если пользователь захотел получить копию себе, добавляем его в список получателей
 			if copy:

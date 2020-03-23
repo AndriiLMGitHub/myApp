@@ -27,12 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['andriipythonanywhere.pythonanywhere.com', '127.0.0.1']
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'andreydecua@gmail.com'
-EMAIL_HOST_PASSWORD = 'Andrey1212'
+EMAIL_HOST_USER = 'Andreydecua@gmail.com'
+EMAIL_HOST_PASSWORD = 'Andrey12121991'
 
 
 # Application definition
