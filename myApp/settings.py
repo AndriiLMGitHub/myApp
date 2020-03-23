@@ -28,6 +28,13 @@ DEBUG = True
 ALLOWED_HOSTS = ['andriipythonanywhere.pythonanywhere.com', '127.0.0.1']
 
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'andreydecua@gmail.com'
+EMAIL_HOST_PASSWORD = 'Andrey1212'
+
+
 # Application definition
 
 INSTALLED_APPS = [
