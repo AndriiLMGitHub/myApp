@@ -23,7 +23,7 @@ class ContactForm(forms.Form):
 # Функция формы обратной связи
 def contact(request):
 	if request.method == 'POST':
-		form = ContactForm(request.POST, request.FILES)
+		form = ContactForm(request.POST)
         # Если форма заполнена корректно, сохраняем все введённые пользователем значения
 		if form.is_valid():
 			subject = form.cleaned_data['subject']
