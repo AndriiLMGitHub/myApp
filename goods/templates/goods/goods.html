@@ -1,0 +1,18 @@
+{% extends 'homepage/base.html' %}
+
+
+
+{% block content %}
+<div class="row">
+{% for good in object_list %}
+
+    <div class="col-md-4">
+      <h3><a href="/goods/{{good.id}}">{{good.name_good}}</a></h3>
+      <h5>{{good.date|date:"d-m-Y"}}</h5>
+      <p>{{good.description}}</p>
+      <h6><span>{{good.price}} - UAH</span></h6>
+    </div>
+
+{% endfor %}
+</div>
+{% endblock %}

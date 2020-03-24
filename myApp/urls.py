@@ -25,6 +25,7 @@ urlpatterns = [
     path('about', include('about.urls')),
     path('news', include('news.urls')),
     path('blog', include('blog.urls')),
+    path('goods', include('goods.urls')),
     path('dashboard', include('dashboard.urls')),
     path('register', views.RegisterFormView.as_view()),
     path('login', views.LoginFormView.as_view()),
