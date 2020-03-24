@@ -1,14 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
-import django
-from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse
 
 from django import forms
 
 # Create your views here.
-"""def contact(request):
-	return render(request, 'contact/contact.html', {})"""
 
 
 class ContactForm(forms.Form):
@@ -34,7 +30,7 @@ def contact(request):
 
 			recepients = ['andreydecua@gmail.com']
 
-			global_message = "Імя: " + name + "\n" + "Повідомлення: " + message + "\n"
+			global_message = "Імя: " + name + "\n" + "Повідомлення: " + message
 
             # Если пользователь захотел получить копию себе, добавляем его в список получателей
 			if copy:
@@ -52,7 +48,3 @@ def contact(request):
 	return render(request, 'contact/contact.html')
 
 
-
-"""def thanks(reguest):
-	thanks = 'thanks'
-	return render(request, 'contact/thanks.html', {'thanks': thanks})"""
