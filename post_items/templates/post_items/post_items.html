@@ -12,7 +12,7 @@
 <div class="row" style="margin-top: 50px;">
     {% for obj in obj_list %}
     <div class="col-lg-4 text-center">
-        <div style="width: 75%; height: 150px; background: #e4e4e4; border-radius: 10px; margin: 0 auto;"></div>
+        <div><img src="{{ obj.model_pic.url }}" alt="" width="263px" height="150px;" class="img-thumbnail"></div>
         <h2>{{obj.name_item}}</h2>
         <p>{{obj.desciption_item}}</p>
         <p>Ціна: <span>{{obj.price_item}}</span></p>
@@ -25,6 +25,7 @@
         <p><a href="edit_item/{{obj.id}}" class="btn btn-warning disabled">Редагувати</a></p>
         <p><a href="delete_item/{{obj.id}}" class="btn btn-danger disabled">Видалити</a></p>
         {% endif %}
+
     </div>
     {% endfor %}
 </div>
