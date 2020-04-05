@@ -1,0 +1,23 @@
+{% extends 'homepage/base.html' %}
+
+
+
+{% block content %}
+
+
+<h2 class="display-4">Це ваше і'мя  : {{add_item.name_item}}</h2>
+<h3>Це ваша ціна: <span>{{add_item.price_item}}</span></h3>
+<h4>Це опис вашого товару: {{add_item.desciption_item}}</h4>
+<p><a href="{% url 'post_items' %}" class="btn btn-success">Повернутися назад</a></p>
+{% if user.is_authenticated %}
+<p><a href="/post_items/edit_item/{{add_item.id}}" class="btn btn-warning">Редагувати</a></p>
+<p><a href="/post_items/delete_item/{{add_item.id}}" class="btn btn-danger">Видалити</a></p>
+{% else %}
+<p><a href="/post_items/edit_item/{{add_item.id}}" class="btn btn-warning disabled">Редагувати</a></p>
+<p><a href="/post_items/delete_item/{{add_item.id}}" class="btn btn-danger disabled">Видалити</a></p>
+
+{% endif %}
+
+
+
+{% endblock %}

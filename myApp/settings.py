@@ -38,6 +38,7 @@ EMAIL_HOST_PASSWORD = 'Andrey1212'
 # Application definition
 
 INSTALLED_APPS = [
+    'post_items',
     'goods',
     'news',
     'account',

@@ -1,0 +1,32 @@
+{% extends 'homepage/base.html' %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+<a href="{% url 'get_item'  %}" class="btn btn-primary btn-lg btn-block">Додати товар <span class="glyphicon glyphicon-plus"></span></a>
+{% else %}
+<a href="{% url 'get_item'  %}" class="btn btn-primary btn-lg btn-block disabled">Додати товар <span class="glyphicon glyphicon-plus"></span></a>
+{% endif %}
+<h1 class="display-3"></h1>
+
+<div class="row" style="margin-top: 50px;">
+    {% for obj in obj_list %}
+    <div class="col-lg-4 text-center">
+        <div style="width: 75%; height: 150px; background: #e4e4e4; border-radius: 10px; margin: 0 auto;"></div>
+        <h2>{{obj.name_item}}</h2>
+        <p>{{obj.desciption_item}}</p>
+        <p>Ціна: <span>{{obj.price_item}}</span></p>
+        <p>{{obj.id}}</p>
+        <p><a class="btn btn-primary" href="view/{{obj.id}}" role="button">Детальніше про {{obj.name_item}} »</a></p>
+        {% if user.is_authenticated %}
+        <p><a href="edit_item/{{obj.id}}" class="btn btn-warning">Редагувати</a></p>
+        <p><a href="delete_item/{{obj.id}}" class="btn btn-danger">Видалити</a></p>
+        {% else %}
+        <p><a href="edit_item/{{obj.id}}" class="btn btn-warning disabled">Редагувати</a></p>
+        <p><a href="delete_item/{{obj.id}}" class="btn btn-danger disabled">Видалити</a></p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
