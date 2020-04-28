@@ -16,7 +16,8 @@
         <h2>{{obj.name_item}}</h2>
         <p>{{obj.desciption_item}}</p>
         <p>Ціна: <span>{{obj.price_item}}</span></p>
-        <p>{{obj.id}}</p>
+        <!--<p>{{obj.id}}</p>-->
+        <p>Було опубліковано - {{ obj.uploaded_at}}</ }}</p>
         <p><a class="btn btn-primary" href="view/{{obj.id}}" role="button">Детальніше про {{obj.name_item}} »</a></p>
         {% if user.is_authenticated %}
         <p><a href="edit_item/{{obj.id}}" class="btn btn-warning">Редагувати</a></p>

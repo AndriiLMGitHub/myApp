@@ -44,4 +44,4 @@ def delete_item(request, id):
         delete_list.delete()
         return HttpResponseRedirect("/post_items/")
     except Add_item.DoesNotExist:
-        return HttpResponseNotFound("<h2>Person not found</h2>")
+        return HttpResponseNotFound("<h2>Item not found</h2>")

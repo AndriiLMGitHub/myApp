@@ -7,5 +7,5 @@ class Add_item(models.Model):
     price_item = models.CharField(max_length=120)
     desciption_item = models.CharField(max_length=120)
     document = models.FileField(upload_to='documents/')
-    model_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
+    model_pic = models.ImageField(upload_to = 'pic_folder/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
