@@ -1,0 +1,18 @@
+{% extends 'homepage/base.html' %}
+
+
+{% block content %}
+<div class="row">
+{% for calculate in object_list %}
+<div class="col-4">
+  <h1>{{calculate.name_calculates}}</h1>
+  <h4>{{calculate.color}}</h4>
+  <p>{{calculate.description}}</p>
+  <h6>{{calculate.date}}</h6>
+</div>
+{% endfor %}
+</div>
+
+
+
+{% endblock %}
