@@ -33,8 +33,8 @@ urlpatterns = [
     path('post_items/', include('post_items.urls')),
     #path('thanks', include('thanks.urls')),
     path('register', views.RegisterFormView.as_view()),
-    path('login', views.LoginFormView.as_view()),
-    path('logout', views.LogoutView.as_view()),
+    path('login', views.LoginFormView.as_view(), name='login'),
+    path('logout', views.LogoutView.as_view(), name='logout'),
 ]
 
 
