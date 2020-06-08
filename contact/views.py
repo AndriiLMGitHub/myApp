@@ -46,5 +46,3 @@ def contact(request):
 			form = ContactForm()
 	# Выводим форму в шаблон
 	return render(request, 'contact/contact.html')
-
-
